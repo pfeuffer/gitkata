@@ -1,1 +1,3 @@
 Now you can rebase the external changes into your original branch.
+If you want to be cautious, you rebase them onto the commit you gave away, first
+and then merge the result into your actual branch.

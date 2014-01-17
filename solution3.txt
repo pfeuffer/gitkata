@@ -1,4 +1,8 @@
-git checkout external_doc
-git rebase --onto kata_incorporate_external external_root external_doc
+# Go to the external changes ...
+git checkout external_repo_doc
+# ... and rebase them onto your original work you once gave away
+git rebase --onto external_doc external_repo_root external_repo_doc
+# Now you have the external work as a branch of you origin work.
+# All there is left to do is a merge
 git checkout kata_incorporate_external
-git reset --hard external_doc
+git merge external_repo_doc

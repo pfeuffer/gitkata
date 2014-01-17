@@ -1,8 +1,21 @@
-git checkout external_root
+# change to the root of the external files (that are matching your old version)
+git checkout external/master
+git checkout HEAD~2
+git tag external_repo_root
+# create a branch here, so we can do some work
 git checkout -b external_doc_tmp
+# create the needed documentation folder and move the files
 mkdir documentation
 git mv doc?.txt documentation
 git commit -m "created documentation folder and moved initial doc files into it"
+# checkout the head of the external work
 git checkout external/master
-git checkout -b external_doc
-git rebase --onto external_doc_tmp external_root external_doc
+# create another branch, so we can work on it
+git checkout -b external_repo_doc
+# and rebase it so that the files are in the needed directory
+git rebase --onto external_doc_tmp external_repo_root external_repo_doc
+
+
+# Note: If you are doing it in your own repository, it is not always necessary to
+#       create new branches, you can use commit ids instead.
+#       But this was not possible in scripts.

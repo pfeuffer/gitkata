@@ -37,7 +37,6 @@ fi
 	git config --local user.name "external user"
 	git add .
 	git commit -m "initial version of documentation"
-	git tag -a external_root -m "the initial version we got"
 	sed -i 's/not been finished/been finished/g' doc1.txt
 	git add doc1.txt
 	git commit -m "finished doc1"

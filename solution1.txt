@@ -1,2 +1,4 @@
+# add the remote repository ...
 git remote add external ../external_doc
+# and fetch from it
 git fetch external

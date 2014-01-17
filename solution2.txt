@@ -1,0 +1,8 @@
+git checkout external_root
+git checkout -b external_doc_tmp
+mkdir documentation
+git mv doc?.txt documentation
+git commit -m "created documentation folder and moved initial doc files into it"
+git checkout external/master
+git checkout -b external_doc
+git rebase --onto external_doc_tmp external_root external_doc

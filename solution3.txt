@@ -1,0 +1,4 @@
+git checkout external_doc
+git rebase --onto kata_incorporate_external external_root external_doc
+git checkout kata_incorporate_external
+git rebase --hard external_doc

@@ -1,4 +1,4 @@
-if [ -f ../external_doc ]; then
+if [ -d ../external_doc ]; then
     echo "please delete the directory ../external_doc before running this"
     exit -1
 fi
@@ -26,7 +26,7 @@ git add .
 git commit -m "more development"
 git tag -a external_doc -m "We took the documentation folder from this commit and gave it away"
 mkdir ../external_doc
-if [ ! -f ../external_doc ]; then
+if [ ! -d ../external_doc ]; then
     echo "could not create directory ../external_doc"
     exit -1
 fi

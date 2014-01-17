@@ -39,12 +39,12 @@ fi
 	git commit -m "initial version of documentation"
 	sed -i 's/not been finished/been finished/g' doc1.txt
 	git add doc1.txt
-	git commit -m "fished doc1"
+	git commit -m "finished doc1"
 	sed -i 's/of this fine/of this completed/g' doc2.txt
 	git add doc2.txt
 	git commit -m "finished doc2"
 )
 echo "And there is" >> documentation/doc2.txt
-echo "more to come" >> documentation/doc2.txt
+echo "more to come." >> documentation/doc2.txt
 git add .
 git commit -m "extended doc2"

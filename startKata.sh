@@ -24,7 +24,7 @@ echo "of this fine" >> documentation/doc2.txt
 echo "documentation." >> documentation/doc2.txt
 git add .
 git commit -m "more development"
-git tag -a external_doc -m "We took the documentation folder from this commit and gave it away"
+git tag -fa external_doc -m "We took the documentation folder from this commit and gave it away"
 mkdir ../external_doc
 if [ ! -d ../external_doc ]; then
     echo "could not create directory ../external_doc"
@@ -36,7 +36,7 @@ fi
     git init
 	git config --local user.name "external user"
 	git add .
-	git commit "initial version of documentation"
+	git commit -m "initial version of documentation"
 	sed -i 's/not been finished/been finished/g' doc1.txt
 	git add doc1.txt
 	git commit -m "fished doc1"

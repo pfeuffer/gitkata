@@ -1,2 +1,2 @@
-git add remote external ../external_doc
+git remote add external ../external_doc
 git fetch external
